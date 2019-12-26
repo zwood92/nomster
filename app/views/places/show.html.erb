@@ -4,11 +4,8 @@
   <br/><br/>
   <p><%= @place.description %></p>
 
-  </head>
-  <body>
-  <div id="map"></div>
   <% if @place.latitude.present? && @place.longitude.present? %>
-    
+
     <script>
 
       function initMap() {
@@ -27,12 +24,11 @@
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAck9_8S6nLVGzjokfNArL78XzX0gvCbrM=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhbhx5vyaSXZDIkqlL2niX_fvzvsYr5Ig&callback=initMap">
     </script>
-
-    <div id="map"></div>
-  <% end %>
-  <br />
+  <div id="map"></div>
+<% end %>
+<br />
   <div class="float-right">
 <% if current_user && current_user == @place.user %>
       <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
