@@ -13,4 +13,4 @@ class PhotosController < ApplicationController
     params.require(:photo).permit(:comment, :picture)
   end
 end
-end
+
