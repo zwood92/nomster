@@ -110,8 +110,11 @@
 
 <% @place.photos.each do |photo| %>
 <div class="col-12 col-sm-6">
+<%= image_tag (photo.picture.url), size: "300x300" %>
+  
+<%# <%= image_tag(link_to(photo.picture.url)) %> 
   <blockquote>
-  <b><%= photo.picture %></b> -
+  <b></b> -
   <%= photo.caption %>
   <small><%= photo.user.email %></small>
     </blockquote>
